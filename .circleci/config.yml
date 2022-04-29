@@ -1,19 +1,20 @@
 version: 2.1
+orbs:
+  sfdx: circleci/salesforce-sfdx@2.2.0
 
 jobs:
   deploy-and-test:
+    executor: sfdx/default
     docker:
       - image: cimg/python:3.10.4-browsers
-    executor: sfdx/default
-    executor_class: large
+    resource_class: large
     steps:
       - sfdx/install
       - run:
           name: Update SFDX
           command: |
-            sfdx update
             sfdx version
-
+            sfdx update
 workflows:
   main:
     jobs:
