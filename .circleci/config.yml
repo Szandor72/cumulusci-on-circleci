@@ -2,9 +2,9 @@ version: 2.1
 
 jobs:
   deploy-and-test:
-    executor: sfdx/default
     docker:
       - image: cimg/python:3.10.4-browsers
+    executor: sfdx/default
     executor_class: large
     steps:
       - sfdx/install
@@ -13,14 +13,7 @@ jobs:
           command: |
             sfdx update
             sfdx version
-     - run: 
-          name: Install CumulusCI 
-          command: |
-            pip install cumulusci
-            cci version
 
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
   main:
     jobs:
