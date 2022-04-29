@@ -10,6 +10,6 @@ To work on this project in a scratch org:
 2. Run `cci flow run dev_org --org dev` to deploy this project.
 3. Run `cci org browser dev` to open the org in your browser.
 
-## DevOps
+## DevOps / Continuous Integration via CircleCi
 
-Check `./config/circleci.yml`
+Check `./circleci/config.yml`
