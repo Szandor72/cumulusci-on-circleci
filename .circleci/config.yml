@@ -18,8 +18,11 @@ jobs:
       - run:
           name: Install CumulusCI
           command: |
-            pip install cumulusci
-            cci version
+            pip install Cumulusci
+      - run:
+          name: Run Tests
+          command: |
+            cci task run robot --org dev
 workflows:
   main:
     jobs:
