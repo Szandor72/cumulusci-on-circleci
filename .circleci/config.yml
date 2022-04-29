@@ -19,6 +19,7 @@ jobs:
           name: Install CumulusCI
           command: |
             pip install Cumulusci
+      - checkout
       - run:
           name: Run Tests
           command: |
