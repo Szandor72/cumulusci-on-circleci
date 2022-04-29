@@ -19,6 +19,13 @@ jobs:
           name: Install CumulusCI
           command: |
             pip install Cumulusci
+      - run:
+          name: authenticated DevHub
+          command: |
+            echo $SFDX_AUTH_DEVHUB > ~/devHub.auth
+            sfdx auth:sfdxurl:store -f ~/devHub.auth \
+                                        --setalias devHub \
+                                        --setdefaultdevhubusername
       - checkout
       - run:
           name: Run Tests
