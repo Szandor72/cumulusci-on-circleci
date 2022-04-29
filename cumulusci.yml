@@ -1,0 +1,22 @@
+minimum_cumulusci_version: '3.57.0'
+project:
+    name: cumulusci-on-circleci
+    package:
+        name: cumulusci-on-circleci
+        api_version: '54.0'
+    git:
+        default_branch: 'main'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/cumulusci-on-circleci/tests
+            options:
+                outputdir: robot/cumulusci-on-circleci/results
+
+    robot_testdoc:
+        options:
+            path: robot/cumulusci-on-circleci/tests
+            output: robot/cumulusci-on-circleci/doc/cumulusci-on-circleci_tests.html
+
