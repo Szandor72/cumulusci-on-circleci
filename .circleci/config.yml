@@ -5,7 +5,7 @@ jobs:
     executor: sfdx/default
     docker:
       - image: cimg/python:3.10.4-browsers
-    executor_class: large
+    resource_class: large
     steps:
       - sfdx/install
 
