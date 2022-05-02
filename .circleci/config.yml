@@ -10,9 +10,13 @@ jobs:
       - image: cimg/python:3.10.4-browsers
     resource_class: large
     steps:
-      - sfdx/install:
-          version: latest-rc
+      - sfdx/install
+      - broser-tools/install-firefox
       - browser-tools/install-geckodriver
+      # enable if necessary
+      # - run:
+      #     name: Update SFDX
+      #     command: sfdx update
       - run:
           name: Install CumulusCI
           command: |
