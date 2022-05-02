@@ -14,6 +14,7 @@ tasks:
       suites: robot/cumulusci-on-circleci/tests
       xunit: test-result-junit.xml
       vars: BROWSER:headlessfirefox
+      processes: 2
       options:
         outputdir: robot/cumulusci-on-circleci/results
 
