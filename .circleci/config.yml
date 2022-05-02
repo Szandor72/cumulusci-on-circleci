@@ -13,10 +13,9 @@ jobs:
       - sfdx/install
       - browser-tools/install-firefox
       - browser-tools/install-geckodriver
-      # enable if necessary
-      # - run:
-      #     name: Update SFDX
-      #     command: sfdx update
+      - run:
+          name: Update SFDX
+          command: sfdx update
       - run:
           name: Install CumulusCI
           command: |
