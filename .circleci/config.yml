@@ -11,7 +11,7 @@ jobs:
     resource_class: large
     steps:
       - sfdx/install
-      - broser-tools/install-firefox
+      - browser-tools/install-firefox
       - browser-tools/install-geckodriver
       # enable if necessary
       # - run:
