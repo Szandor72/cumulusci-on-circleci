@@ -12,7 +12,7 @@ jobs:
     steps:
       - sfdx/install:
           version: latest-rc
-      - browsertools/install-geckodriver
+      - browser-tools/install-geckodriver
       - run:
           name: Install CumulusCI
           command: |
