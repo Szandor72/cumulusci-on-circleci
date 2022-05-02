@@ -21,7 +21,7 @@ jobs:
           command: |
             pip install Cumulusci
       - run:
-          name: authenticated DevHub
+          name: authenticate DevHub
           command: |
             echo $SFDX_AUTH_DEVHUB > ~/devHub.auth
             sfdx auth:sfdxurl:store -f ~/devHub.auth \
