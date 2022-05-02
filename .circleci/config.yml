@@ -10,11 +10,7 @@ jobs:
     resource_class: large
     steps:
       - sfdx/install
-      - run:
-          name: Update SFDX
-          command: |
-            sfdx version
-            sfdx update
+        version: latest
       - run:
           name: Install CumulusCI
           command: |
